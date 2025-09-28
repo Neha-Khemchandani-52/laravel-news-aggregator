@@ -84,7 +84,7 @@ After that, you can test:
 
 A ready-to-use Postman collection is included.
 
-- File: `News-Aggregator-APIs.postman_collection.json`
+- File: `laravel-news-aggregator/News-Aggregator-APIs.postman_collection.json`
 - Usage:
   1. Import into Postman.
   2. Update `{{base_url}}`.
@@ -163,8 +163,7 @@ php artisan queue:work redis --tries=3
 
 
 ## Sample Database Data
-A sample MySQL dump is provided in folder (`sample_data_sql`) showing schema + a few rows 
-from `articles`, `sources`, `authors`, `categories`,`article_category`, `user_preferences`, `users`
+A sample MySQL dump is provided inside (laravel-news-aggregator/sample_data_sql.zip) showing schema + a few rows from `articles`, `sources`, `authors`, `categories`,`article_category`, `user_preferences`, `users` tables
 
 
 ---
