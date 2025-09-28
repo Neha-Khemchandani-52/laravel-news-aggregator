@@ -1,0 +1,351 @@
+{
+	"info": {
+		"_postman_id": "28a8d229-e4c7-4411-bf7b-dc3ed247a765",
+		"name": "News-Aggregator-APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33677827"
+	},
+	"item": [
+		{
+			"name": "http://news-aggregator.loc/api/sources",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://news-aggregator.loc/api/sources",
+					"protocol": "http",
+					"host": [
+						"news-aggregator",
+						"loc"
+					],
+					"path": [
+						"api",
+						"sources"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://news-aggregator.loc/api/categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://news-aggregator.loc/api/categories",
+					"protocol": "http",
+					"host": [
+						"news-aggregator",
+						"loc"
+					],
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://news-aggregator.loc/api/authors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://news-aggregator.loc/api/authors",
+					"protocol": "http",
+					"host": [
+						"news-aggregator",
+						"loc"
+					],
+					"path": [
+						"api",
+						"authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://news-aggregator.loc/api/articles?author_id=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://news-aggregator.loc/api/articles?author_id=1",
+					"protocol": "http",
+					"host": [
+						"news-aggregator",
+						"loc"
+					],
+					"path": [
+						"api",
+						"articles"
+					],
+					"query": [
+						{
+							"key": "author_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://news-aggregator.loc/api/articles?category_id=2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://news-aggregator.loc/api/articles?category_id=2",
+					"protocol": "http",
+					"host": [
+						"news-aggregator",
+						"loc"
+					],
+					"path": [
+						"api",
+						"articles"
+					],
+					"query": [
+						{
+							"key": "category_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://news-aggregator.loc/api/articles?source_id=3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://news-aggregator.loc/api/articles?source_id=3",
+					"protocol": "http",
+					"host": [
+						"news-aggregator",
+						"loc"
+					],
+					"path": [
+						"api",
+						"articles"
+					],
+					"query": [
+						{
+							"key": "source_id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://news-aggregator.loc/api/articles?q=bitcoin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://news-aggregator.loc/api/articles?q=bitcoin",
+					"protocol": "http",
+					"host": [
+						"news-aggregator",
+						"loc"
+					],
+					"path": [
+						"api",
+						"articles"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "bitcoin"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save User Preferences",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5J8kQQ6GEzf0KGftTnG3bCAollyiK3RN03uatYJ8992c8355",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"sources\": [\"newsapi\"],\n  \"categories\": [\"Technology\"],\n  \"authors\": [\"Anonymous\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://news-aggregator.loc/api/user/preferences",
+					"protocol": "http",
+					"host": [
+						"news-aggregator",
+						"loc"
+					],
+					"path": [
+						"api",
+						"user",
+						"preferences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch User Preferences",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5J8kQQ6GEzf0KGftTnG3bCAollyiK3RN03uatYJ8992c8355",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://news-aggregator.loc/api/user/preferences",
+					"protocol": "http",
+					"host": [
+						"news-aggregator",
+						"loc"
+					],
+					"path": [
+						"api",
+						"user",
+						"preferences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Very first step to create Token for all these APIs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://news-aggregator.loc/api/demo-token",
+					"protocol": "http",
+					"host": [
+						"news-aggregator",
+						"loc"
+					],
+					"path": [
+						"api",
+						"demo-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://news-aggregator.loc/api/articles",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "S4iqRVdhPshZdTIz47VirAblEwMATsFgo9WwqOCo42bd0457",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://news-aggregator.loc/api/articles",
+					"protocol": "http",
+					"host": [
+						"news-aggregator",
+						"loc"
+					],
+					"path": [
+						"api",
+						"articles"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "TcbO0fl9JXp5wHJ9Od4x6YBBlOsDegJOuc56dVDjb325ce30",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
